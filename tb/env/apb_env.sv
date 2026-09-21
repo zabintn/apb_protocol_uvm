@@ -1,0 +1,27 @@
+class apb_env extends uvm_env;
+	`uvm_component_utils(apb_env)
+	apb_agent agt;
+	apb_scoreboard sb;
+
+	function new(string name = "apb_env", uvm_component parent= null);
+		super.new(name, parent);
+	endfunction
+
+	function void build_phase(uvm_phase phase);
+		`uvm_info(get_type_name(), "BEFORE ENVIRONMENT CONSTRUCTOR", UVM_LOW);
+		super.build_phase(phase);
+		agt=apb_agent::type_id::create("agt", this);
+		sb=apb_scoreboard::type_id::create("sb", this);
+		`uvm_info(get_type_name(), "AFTER ENVIRONMENT CONSTRUCTOR", UVM_LOW);
+	endfunction
+
+	function void connect_phase(uvm_phase phase);
+		super.connect_phase(phase);
+		`uvm_info(get_type_name(), "INSIDE CONNECT PHASE OF UVM ENVIRONMENT", UVM_LOW);
+	endfunction
+
+	task run_phase(uvm_phase phase);
+		`uvm_info(get_type_name(), "INSIDE RUN PHASE OF UVM ENVIRONMENT", UVM_LOW);
+	endtask
+
+endclass
