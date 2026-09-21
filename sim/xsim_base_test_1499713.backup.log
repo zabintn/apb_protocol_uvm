@@ -1,0 +1,99 @@
+#-----------------------------------------------------------
+# xsim v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Mon Sep 21 14:24:48 2026
+# Process ID         : 1499713
+# Current directory  : /home/nashita/Desktop/practice/apb_uvm/sim
+# Command line       : xsim -log xsim_base_test.log -mode tcl -source {xsim.dir/tb_top_snap/xsim_script.tcl}
+# Log file           : /home/nashita/Desktop/practice/apb_uvm/sim/xsim_base_test.log
+# Journal file       : /home/nashita/Desktop/practice/apb_uvm/sim/xsim.jou
+# Running On         : vlsi-vivado
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 24.04.4 LTS
+# Processor Detail   : Intel(R) Core(TM) i5-10400 CPU @ 2.90GHz
+# CPU Frequency      : 4100.128 MHz
+# CPU Physical cores : 6
+# CPU Logical cores  : 12
+# Host memory        : 41875 MB
+# Swap memory        : 27648 MB
+# Total Virtual      : 69524 MB
+# Available Virtual  : 57321 MB
+#-----------------------------------------------------------
+source xsim.dir/tb_top_snap/xsim_script.tcl
+# xsim {tb_top_snap} -testplusarg UVM_TESTNAME=base_test -testplusarg UVM_VERBOSITY=UVM_MEDIUM -autoloadwcfg -runall
+Time resolution is 1 ps
+run -all
+UVM_INFO /tools/2025.2/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv(18601) @ 0: reporter [UVM/RELNOTES] 
+----------------------------------------------------------------
+UVM-1.2
+(C) 2007-2014 Mentor Graphics Corporation
+(C) 2007-2014 Cadence Design Systems, Inc.
+(C) 2006-2014 Synopsys, Inc.
+(C) 2011-2013 Cypress Semiconductor Corp.
+(C) 2013-2014 NVIDIA Corporation
+----------------------------------------------------------------
+
+  ***********       IMPORTANT RELEASE NOTES         ************
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_NO_DEPRECATED undefined.
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_OBJECT_DO_NOT_NEED_CONSTRUCTOR undefined.
+
+      (Specify +UVM_NO_RELNOTES to turn off this notice)
+
+UVM_INFO /tools/2025.2/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv(18648) @ 0: reporter [NO_DPI_TSTNAME] UVM_NO_DPI defined--getting UVM_TESTNAME directly, without DPI
+UVM_INFO @ 0: reporter [RNTST] Running test base_test...
+UVM_INFO /home/nashita/Desktop/practice/apb_uvm/tb/pkg/../test_lib/uvm_base_test.sv(11) @ 0: uvm_test_top [uvm_test_top] BEFORE BUILD PHASE OF BASE TEST
+UVM_INFO /home/nashita/Desktop/practice/apb_uvm/tb/pkg/../test_lib/uvm_base_test.sv(14) @ 0: uvm_test_top [uvm_test_top] AFTER BUILD PHASE OF BASE TEST
+UVM_INFO /home/nashita/Desktop/practice/apb_uvm/tb/pkg/../env/uvm_env.sv(11) @ 0: uvm_test_top.env_o [env] BEFORE ENVIRONMENT CONSTRUCTOR
+UVM_INFO /home/nashita/Desktop/practice/apb_uvm/tb/pkg/../env/uvm_env.sv(15) @ 0: uvm_test_top.env_o [env] AFTER ENVIRONMENT CONSTRUCTOR
+UVM_INFO /home/nashita/Desktop/practice/apb_uvm/tb/pkg/../agent/uvm_agent.sv(13) @ 0: uvm_test_top.env_o.agt [agent] BEFORE AGENT BUILD PHASE
+UVM_INFO /home/nashita/Desktop/practice/apb_uvm/tb/pkg/../agent/uvm_agent.sv(20) @ 0: uvm_test_top.env_o.agt [agent] AFTER AGENT BUILD PHASE
+UVM_INFO /home/nashita/Desktop/practice/apb_uvm/tb/pkg/../agent/uvm_driver.sv(10) @ 0: uvm_test_top.env_o.agt.drv [driver] INSIDE DRIVER BUILD PHASE
+UVM_INFO /home/nashita/Desktop/practice/apb_uvm/tb/pkg/../agent/uvm_monitor.sv(9) @ 0: uvm_test_top.env_o.agt.mon [monitor] INSIDE UVM MONITOR BUILD PHASE
+UVM_INFO /home/nashita/Desktop/practice/apb_uvm/tb/pkg/../seq_lib/uvm_sequencer.sv(10) @ 0: uvm_test_top.env_o.agt.seqr [seqcr] INSIDE SEQUENCER BUILD PHASE
+UVM_INFO /home/nashita/Desktop/practice/apb_uvm/tb/pkg/../env/uvm_scoreboard.sv(10) @ 0: uvm_test_top.env_o.sb [scoreboard] INSIDE SCOREBOARD BUILD PHASE
+UVM_INFO /home/nashita/Desktop/practice/apb_uvm/tb/pkg/../agent/uvm_driver.sv(15) @ 0: uvm_test_top.env_o.agt.drv [driver] INSIDE DRIVER CONNECT PHASE
+UVM_INFO /home/nashita/Desktop/practice/apb_uvm/tb/pkg/../agent/uvm_monitor.sv(13) @ 0: uvm_test_top.env_o.agt.mon [monitor] INSIDE UVM MONITOR CONNECT PHASE
+UVM_INFO /home/nashita/Desktop/practice/apb_uvm/tb/pkg/../seq_lib/uvm_sequencer.sv(15) @ 0: uvm_test_top.env_o.agt.seqr [seqcr] INSIDE SEQUENCER CONNECT PHASE
+UVM_INFO /home/nashita/Desktop/practice/apb_uvm/tb/pkg/../agent/uvm_agent.sv(25) @ 0: uvm_test_top.env_o.agt [agent] INSIDE AGENT CONNECT PHASE
+UVM_INFO /home/nashita/Desktop/practice/apb_uvm/tb/pkg/../env/uvm_scoreboard.sv(14) @ 0: uvm_test_top.env_o.sb [scoreboard] INSIDE SCOREBOARD CONNECT PHASE
+UVM_INFO /home/nashita/Desktop/practice/apb_uvm/tb/pkg/../env/uvm_env.sv(20) @ 0: uvm_test_top.env_o [env] INSIDE CONNECT PHASE OF UVM ENVIRONMENT
+UVM_INFO /tools/2025.2/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv(20867) @ 0: reporter [UVM/COMP/NAMECHECK] This implementation of the component name checks requires DPI to be enabled
+UVM_INFO /home/nashita/Desktop/practice/apb_uvm/tb/pkg/../test_lib/uvm_base_test.sv(18) @ 0: uvm_test_top [uvm_test_top] BEFORE RUN PHASE OF BASE TEST
+UVM_INFO /home/nashita/Desktop/practice/apb_uvm/tb/pkg/../test_lib/uvm_base_test.sv(20) @ 0: uvm_test_top [uvm_test_top] AFTER RUN PHASE OF BASE TEST
+UVM_INFO /home/nashita/Desktop/practice/apb_uvm/tb/pkg/../env/uvm_env.sv(24) @ 0: uvm_test_top.env_o [env] INSIDE RUN PHASE OF UVM ENVIRONMENT
+UVM_INFO /home/nashita/Desktop/practice/apb_uvm/tb/pkg/../env/uvm_scoreboard.sv(18) @ 0: uvm_test_top.env_o.sb [scoreboard] INSIDE SCOREBOARD RUN PHASE
+UVM_INFO /home/nashita/Desktop/practice/apb_uvm/tb/pkg/../agent/uvm_agent.sv(29) @ 0: uvm_test_top.env_o.agt [agent] INSIDE AGENT RUN PHASE
+UVM_INFO /home/nashita/Desktop/practice/apb_uvm/tb/pkg/../seq_lib/uvm_sequencer.sv(19) @ 0: uvm_test_top.env_o.agt.seqr [seqcr] INSIDE SEQUENCER RUN PHASE
+UVM_INFO /home/nashita/Desktop/practice/apb_uvm/tb/pkg/../agent/uvm_monitor.sv(17) @ 0: uvm_test_top.env_o.agt.mon [monitor] INSIDE UVM MONITOR RUN PHASE
+UVM_INFO /home/nashita/Desktop/practice/apb_uvm/tb/pkg/../agent/uvm_driver.sv(19) @ 0: uvm_test_top.env_o.agt.drv [driver] INSIDE DRIVER RUN PHASE
+UVM_INFO /tools/2025.2/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv(13673) @ 0: reporter [UVM/REPORT/SERVER] 
+--- UVM Report Summary ---
+
+** Report counts by severity
+UVM_INFO :   28
+UVM_WARNING :    0
+UVM_ERROR :    0
+UVM_FATAL :    0
+** Report counts by id
+[NO_DPI_TSTNAME]     1
+[RNTST]     1
+[UVM/COMP/NAMECHECK]     1
+[UVM/RELNOTES]     1
+[agent]     4
+[driver]     3
+[env]     4
+[monitor]     3
+[scoreboard]     3
+[seqcr]     3
+[uvm_test_top]     4
+
+$finish called at time : 0 fs : File "/tools/2025.2/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 18699
+exit
+INFO: xsimkernel Simulation Memory Usage: 306148 KB (Peak: 350608 KB), Simulation CPU Usage: 1180 ms
+INFO: [Common 17-206] Exiting xsim at Mon Sep 21 14:24:51 2026...

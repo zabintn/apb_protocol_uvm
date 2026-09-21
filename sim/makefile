@@ -3,7 +3,7 @@
 # Compile -> Elaborate -> Simulate flow
 # ----------------------------------------
 
-TEST ?= base_test
+TEST ?= apb_base_test
 UVM_VERBOSITY ?= UVM_MEDIUM
 SEED ?= random
 
@@ -11,8 +11,8 @@ RTL_DIR   = ../rtl
 TB_DIR    = .
 SIM_DIR   = .
 
-TOP       = tb_top
-SNAPSHOT  = tb_top_snap
+TOP       = apb_tb_top
+SNAPSHOT  = apb_tb_top_snap
 TIMESCALE = 1ns/1ps
 RTL_SRC   = $(RTL_DIR)/apb_v3_sram.sv
 TB_SRC    = $(TB_DIR)/compile.f
