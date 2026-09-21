@@ -1,7 +1,0 @@
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/nashita/Desktop/practice/apb_uvm/rtl/apb_v3_sram.sv" into library work
-INFO: [VRFC 10-311] analyzing module apb_v3_sram
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/nashita/Desktop/practice/apb_uvm/tb/pkg/uvm_agent_pkg.sv" into library work
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/nashita/Desktop/practice/apb_uvm/tb/pkg/uvm_env_pkg.sv" into library work
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/nashita/Desktop/practice/apb_uvm/tb/pkg/uvm_test_pkg.sv" into library work
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/nashita/Desktop/practice/apb_uvm/tb/top/uvm_top.sv" into library work
-INFO: [VRFC 10-311] analyzing module tb_top

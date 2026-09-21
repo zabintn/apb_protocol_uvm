@@ -3,7 +3,7 @@
 # Compile -> Elaborate -> Simulate flow
 # ----------------------------------------
 
-TEST ?= base_test
+TEST ?= apb_base_test
 UVM_VERBOSITY ?= UVM_MEDIUM
 SEED ?= random
 
@@ -11,8 +11,8 @@ RTL_DIR   = ../rtl
 TB_DIR    = .
 SIM_DIR   = .
 
-TOP       = tb_top
-SNAPSHOT  = tb_top_snap
+TOP       = apb_tb_top
+SNAPSHOT  = apb_tb_top_snap
 TIMESCALE = 1ns/1ps
 RTL_SRC   = $(RTL_DIR)/apb_v3_sram.sv
 TB_SRC    = $(TB_DIR)/compile.f
@@ -35,9 +35,15 @@ simulate: elaborate
 		-testplusarg "UVM_VERBOSITY=$(UVM_VERBOSITY)"\
 		-log xsim_$(TEST).log
 
+gui_sim: elaborate
+	xsim $(SNAPSHOT) -gui \
+		-testplusarg "UVM_TESTNAME=$(TEST)" \
+		-testplusarg "UVM_VERBOSITY=$(UVM_VERBOSITY)"\
+		-log xsim_$(TEST).log
 
 # Convenience target: does all three in order
 all: compile elaborate simulate
+allg: compile elaborate gui_sim
 
 clean:
 	rm -rf xsim.dir *.log *.jou *.pb *.wdb .Xil xelab.pb webtalk* 

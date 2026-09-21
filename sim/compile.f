@@ -1,4 +1,5 @@
-../tb/pkg/uvm_agent_pkg.sv
-../tb/pkg/uvm_env_pkg.sv
-../tb/pkg/uvm_test_pkg.sv
-../tb/top/uvm_top.sv
+../tb/top/apb_interface.sv
+../tb/pkg/apb_agent_pkg.sv
+../tb/pkg/apb_env_pkg.sv
+../tb/pkg/apb_test_pkg.sv
+../tb/top/apb_tb_top.sv
