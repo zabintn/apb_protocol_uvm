@@ -1,0 +1,113 @@
+xvlog --sv ../rtl/apb_v3_sram.sv -f ./compile.f \
+	-L uvm
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/nashita/Desktop/practice/apb_uvm/rtl/apb_v3_sram.sv" into library work
+INFO: [VRFC 10-311] analyzing module apb_v3_sram
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/nashita/Desktop/practice/apb_uvm/tb/pkg/uvm_agent_pkg.sv" into library work
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/nashita/Desktop/practice/apb_uvm/tb/pkg/uvm_env_pkg.sv" into library work
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/nashita/Desktop/practice/apb_uvm/tb/pkg/uvm_test_pkg.sv" into library work
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/nashita/Desktop/practice/apb_uvm/tb/top/uvm_top.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_top
+xelab tb_top -timescale=1ns/1ps -s tb_top_snap \
+	-L uvm -debug typical
+Vivado Simulator v2025.2
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: /tools/2025.2/Vivado/bin/unwrapped/lnx64.o/xelab tb_top -timescale=1ns/1ps -s tb_top_snap -L uvm -debug typical 
+Multi-threading is on. Using 10 slave threads.
+WARNING: [XSIM 43-3431] One or more environment variables have been detected which affect the operation of the C compiler. These are typically not set in standard installations and are not tested by AMD, however they may be appropriate for your system, so the flow will attempt to continue.  If errors occur, try running xelab with the "-mt off -v 1" switches to see more information from the C compiler. The following environment variables have been detected:
+    LIBRARY_PATH
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package uvm.uvm_pkg
+Compiling package std.std
+Compiling package work.uvm_agent_pkg
+Compiling package work.uvm_test_pkg
+Compiling package work.uvm_env_pkg
+Compiling module work.tb_top
+Built simulation snapshot tb_top_snap
+xsim tb_top_snap -runall \
+	-testplusarg "UVM_TESTNAME=base_test" \
+	-testplusarg "UVM_VERBOSITY=UVM_MEDIUM"\
+	-log xsim_base_test.log
+
+****** xsim v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Mon Sep 21 13:22:36 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/tb_top_snap/xsim_script.tcl
+# xsim {tb_top_snap} -testplusarg UVM_TESTNAME=base_test -testplusarg UVM_VERBOSITY=UVM_MEDIUM -autoloadwcfg -runall
+Time resolution is 1 ps
+run -all
+UVM_INFO /tools/2025.2/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv(18601) @ 0: reporter [UVM/RELNOTES] 
+----------------------------------------------------------------
+UVM-1.2
+(C) 2007-2014 Mentor Graphics Corporation
+(C) 2007-2014 Cadence Design Systems, Inc.
+(C) 2006-2014 Synopsys, Inc.
+(C) 2011-2013 Cypress Semiconductor Corp.
+(C) 2013-2014 NVIDIA Corporation
+----------------------------------------------------------------
+
+  ***********       IMPORTANT RELEASE NOTES         ************
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_NO_DEPRECATED undefined.
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_OBJECT_DO_NOT_NEED_CONSTRUCTOR undefined.
+
+      (Specify +UVM_NO_RELNOTES to turn off this notice)
+
+UVM_INFO /tools/2025.2/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv(18648) @ 0: reporter [NO_DPI_TSTNAME] UVM_NO_DPI defined--getting UVM_TESTNAME directly, without DPI
+UVM_INFO @ 0: reporter [RNTST] Running test base_test...
+UVM_INFO /home/nashita/Desktop/practice/apb_uvm/tb/pkg/../test_lib/uvm_base_test.sv(11) @ 0: uvm_test_top [uvm_test_top] BEFORE BUILD PHASE OF BASE TEST
+UVM_INFO /home/nashita/Desktop/practice/apb_uvm/tb/pkg/../test_lib/uvm_base_test.sv(14) @ 0: uvm_test_top [uvm_test_top] AFTER BUILD PHASE OF BASE TEST
+UVM_INFO /home/nashita/Desktop/practice/apb_uvm/tb/pkg/../env/uvm_env.sv(11) @ 0: uvm_test_top.env_o [env] INSIDE ENVIRONMENT CONSTRUCTOR
+UVM_INFO /home/nashita/Desktop/practice/apb_uvm/tb/pkg/../env/uvm_env.sv(15) @ 0: uvm_test_top.env_o [env] AFTER ENVIRONMENT CONSTRUCTOR
+UVM_INFO /home/nashita/Desktop/practice/apb_uvm/tb/pkg/../agent/uvm_agent.sv(13) @ 0: uvm_test_top.env_o.agt [agent] INSIDE AGENT BUILD PHASE
+UVM_INFO /home/nashita/Desktop/practice/apb_uvm/tb/pkg/../agent/uvm_driver.sv(10) @ 0: uvm_test_top.env_o.agt.drv [driver] INSIDE DRIVER BUILD PHASE
+UVM_INFO /home/nashita/Desktop/practice/apb_uvm/tb/pkg/../agent/uvm_monitor.sv(9) @ 0: uvm_test_top.env_o.agt.mon [monitor] INSIDE UVM MONITOR BUILD PHASE
+UVM_INFO /home/nashita/Desktop/practice/apb_uvm/tb/pkg/../seq_lib/uvm_sequencer.sv(10) @ 0: uvm_test_top.env_o.agt.seqr [seqcr] INSIDE SEQUENCER BUILD PHASE
+UVM_INFO /home/nashita/Desktop/practice/apb_uvm/tb/pkg/../env/uvm_scoreboard.sv(10) @ 0: uvm_test_top.env_o.sb [scoreboard] INSIDE SCOREBOARD BUILD PHASE
+UVM_INFO /home/nashita/Desktop/practice/apb_uvm/tb/pkg/../agent/uvm_driver.sv(15) @ 0: uvm_test_top.env_o.agt.drv [driver] INSIDE DRIVER CONNECT PHASE
+UVM_INFO /home/nashita/Desktop/practice/apb_uvm/tb/pkg/../agent/uvm_monitor.sv(13) @ 0: uvm_test_top.env_o.agt.mon [monitor] INSIDE UVM MONITOR CONNECT PHASE
+UVM_INFO /home/nashita/Desktop/practice/apb_uvm/tb/pkg/../seq_lib/uvm_sequencer.sv(14) @ 0: uvm_test_top.env_o.agt.seqr [seqcr] INSIDE SEQUENCER CONNECT PHASE
+UVM_INFO /home/nashita/Desktop/practice/apb_uvm/tb/pkg/../agent/uvm_agent.sv(24) @ 0: uvm_test_top.env_o.agt [agent] INSIDE AGENT CONNECT PHASE
+UVM_INFO /home/nashita/Desktop/practice/apb_uvm/tb/pkg/../env/uvm_scoreboard.sv(14) @ 0: uvm_test_top.env_o.sb [scoreboard] INSIDE SCOREBOARD CONNECT PHASE
+UVM_INFO /home/nashita/Desktop/practice/apb_uvm/tb/pkg/../env/uvm_env.sv(20) @ 0: uvm_test_top.env_o [env] INSIDE CONNECT PHASE OF UVM ENVIRONMENT
+UVM_ERROR @ 0: uvm_test_top.env_o.agt.seqr.rsp_export [Connection Error] connection count of 0 does not meet required minimum of 1
+UVM_FATAL @ 0: reporter [BUILDERR] stopping due to build errors
+UVM_INFO /tools/2025.2/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv(13673) @ 0: reporter [UVM/REPORT/SERVER] 
+--- UVM Report Summary ---
+
+** Report counts by severity
+UVM_INFO :   18
+UVM_WARNING :    0
+UVM_ERROR :    1
+UVM_FATAL :    1
+** Report counts by id
+[BUILDERR]     1
+[Connection Error]     1
+[NO_DPI_TSTNAME]     1
+[RNTST]     1
+[UVM/RELNOTES]     1
+[agent]     2
+[driver]     2
+[env]     3
+[monitor]     2
+[scoreboard]     2
+[seqcr]     2
+[uvm_test_top]     2
+
+$finish called at time : 0 fs : File "/tools/2025.2/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 18538
+exit
+INFO: xsimkernel Simulation Memory Usage: 305888 KB (Peak: 350608 KB), Simulation CPU Usage: 1190 ms
+INFO: [Common 17-206] Exiting xsim at Mon Sep 21 13:22:39 2026...
