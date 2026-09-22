@@ -35,9 +35,15 @@ simulate: elaborate
 		-testplusarg "UVM_VERBOSITY=$(UVM_VERBOSITY)"\
 		-log xsim_$(TEST).log
 
+gui_sim: elaborate
+	xsim $(SNAPSHOT) -gui \
+		-testplusarg "UVM_TESTNAME=$(TEST)" \
+		-testplusarg "UVM_VERBOSITY=$(UVM_VERBOSITY)"\
+		-log xsim_$(TEST).log
 
 # Convenience target: does all three in order
 all: compile elaborate simulate
+allg: compile elaborate gui_sim
 
 clean:
 	rm -rf xsim.dir *.log *.jou *.pb *.wdb .Xil xelab.pb webtalk* 

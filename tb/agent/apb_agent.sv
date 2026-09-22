@@ -23,6 +23,7 @@ class apb_agent extends uvm_agent;
 	function void connect_phase(uvm_phase phase);
 		super.connect_phase(phase);
 		`uvm_info(get_type_name(), "INSIDE AGENT CONNECT PHASE", UVM_LOW);
+		drv.seq_item_port.connect(seqr.seq_item_export);
 	endfunction
 
 	task run_phase(uvm_phase phase);

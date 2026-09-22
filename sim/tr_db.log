@@ -1,0 +1,1 @@
+  CREATE_STREAM @0 {NAME:dseq T:Transactions SCOPE:uvm_test_top.env_o.agt.seqr STREAM:649}

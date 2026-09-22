@@ -4,4 +4,5 @@ package apb_test_pkg;
 	import apb_agent_pkg::*;
 	import apb_env_pkg::*;
 	`include "../test_lib/apb_base_test.sv"
+	`include "../test_lib/apb_dummy_test.sv"
 endpackage

@@ -1,0 +1,7 @@
+Running: xsim.dir/apb_tb_top_snap/xsimk -runall -simmode gui -testplusarg UVM_TESTNAME=apb_dummy_test -testplusarg UVM_VERBOSITY=UVM_MEDIUM -wdb apb_tb_top_snap.wdb -simrunnum 0 -socket 33991
+Design successfully loaded
+Design Loading Memory Usage: 211616 KB (Peak: 211624 KB)
+Design Loading CPU Usage: 1180 ms
+Simulation completed
+Simulation Memory Usage: 306424 KB (Peak: 350884 KB)
+Simulation CPU Usage: 1190 ms

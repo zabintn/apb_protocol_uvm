@@ -18,6 +18,7 @@ class apb_env extends uvm_env;
 	function void connect_phase(uvm_phase phase);
 		super.connect_phase(phase);
 		`uvm_info(get_type_name(), "INSIDE CONNECT PHASE OF UVM ENVIRONMENT", UVM_LOW);
+		agt.mon.item_collect_port.connect(sb.item_collect_export);
 	endfunction
 
 	task run_phase(uvm_phase phase);
