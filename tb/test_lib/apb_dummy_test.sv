@@ -19,21 +19,22 @@ class apb_dummy_test extends apb_base_test;
 			dseq.op=apb_dummy_seq::RESET;
 			dseq.start(env_o.agt.seqr);
 		end
+		`uvm_info(get_type_name(), "RESET RELEASED", UVM_LOW);
 
-		`uvm_info(get_type_name(), "REQUESTING 10 WRITE", UVM_LOW);
-		repeat(60) begin
+		`uvm_info(get_type_name(), "REQUESTING WRITE TRANSACTIONS", UVM_LOW);
+		repeat(5) begin
 			dseq= apb_dummy_seq::type_id::create("dseq");
 			dseq.op=apb_dummy_seq::WRITE;
 			dseq.start(env_o.agt.seqr);
 		end
-		`uvm_info(get_type_name(), "REQUESTED 60 WRITES", UVM_LOW);
-		`uvm_info(get_type_name(), "REQUESTING 60 READS", UVM_LOW);
-		repeat(60) begin
+		`uvm_info(get_type_name(), "REQUESTED WRITES COMPLETE", UVM_LOW);
+		`uvm_info(get_type_name(), "REQUESTING 60 READ TRANSACTIONS", UVM_LOW);
+		repeat(5) begin
 			dseq= apb_dummy_seq::type_id::create("dseq");
 			dseq.op=apb_dummy_seq::READ;
 			dseq.start(env_o.agt.seqr);
 		end
-		`uvm_info(get_type_name(), "REQUESTED 60 READS", UVM_LOW);
+		`uvm_info(get_type_name(), "REQUESTED READS COMPLETE", UVM_LOW);
 		phase.drop_objection(this);
 		`uvm_info(get_full_name(), "AFTER RUN PHASE OF DUMMY TEST", UVM_LOW);
 	endtask

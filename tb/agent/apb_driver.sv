@@ -19,41 +19,49 @@ class apb_driver extends uvm_driver#(apb_seq_item);
 	endfunction
 
 	task run_phase(uvm_phase phase);
+		apb_vif.presetn<=1'b0;
+	
 		forever begin
 			`uvm_info(get_type_name(), "INSIDE DRIVER RUN PHASE", UVM_LOW);
 			seq_item_port.get_next_item(req);
 
-			if (!req.presetn)
+			if(!req.presetn) begin
+				apb_vif.presetn<=1'b0;
+				apb_vif.psel<=1'b0;
+				apb_vif.penable<=1'b0;
+				@(posedge apb_vif.pclk);
 				seq_item_port.item_done();
+			end
 			else begin
 
-			//begin setup phase
-
-			apb_vif.psel<=1'b1;
-			apb_vif.penable<=1'b0;
-			apb_vif.pwrite<=req.pwrite;
-			apb_vif.paddr<=req.paddr;
-			apb_vif.pwdata<=req.pwdata;
+				apb_vif.presetn<=1'b1;
+				@(posedge apb_vif.pclk);	
+				//begin setup phase
+				apb_vif.psel<=1'b1;
+				apb_vif.penable<=1'b0;
+				apb_vif.pwrite<=req.pwrite;
+				apb_vif.paddr<=req.paddr;
+				apb_vif.pwdata<=req.pwdata;
 			
-			//begin access phase
+				//begin access phase
 			
-			@(posedge apb_vif.pclk);
-			apb_vif.penable<=1'b1;
+				@(posedge apb_vif.pclk);
+				apb_vif.penable<=1'b1;
 			
-			fork
-				wait(apb_vif.pready);
-			begin
-				repeat(100) @(posedge apb_vif.pclk);
-				`uvm_fatal("TIMEOUT", "PREADY NOT HIGH FOR 100 CYCLES");
+				fork
+					wait(apb_vif.pready);
+				begin
+					repeat(100) @(posedge apb_vif.pclk);
+					`uvm_fatal("TIMEOUT", "PREADY NOT HIGH FOR 100 CYCLES");
+				end
+				join_any
+				disable fork;
+			
+				@(negedge apb_vif.pclk);
+				req.pready=apb_vif.pready;
+			
+				seq_item_port.item_done();
 			end
-			join_any
-			disable fork;
-			
-			@(negedge apb_vif.pclk);
-			req.pready=apb_vif.pready;
-			
-			seq_item_port.item_done();
-		end
 		end
 	endtask
 

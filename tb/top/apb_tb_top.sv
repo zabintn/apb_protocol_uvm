@@ -12,6 +12,8 @@ always #5 pclk=~pclk;
 
 
 apb_if apb_vif(pclk);
+
+
 initial begin
 	uvm_config_db#(virtual apb_if)::set(uvm_root::get(), "*", "vif", apb_vif);
 end

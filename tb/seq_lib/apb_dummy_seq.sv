@@ -10,7 +10,7 @@ class apb_dummy_seq extends apb_base_seq;
 	endfunction
 
 	task body();
-		super.body();
+//		super.body();
 		req=apb_seq_item::type_id::create("req");
 		start_item(req);
 		case(op)
