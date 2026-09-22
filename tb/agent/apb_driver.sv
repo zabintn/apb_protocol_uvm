@@ -22,8 +22,13 @@ class apb_driver extends uvm_driver#(apb_seq_item);
 		forever begin
 			`uvm_info(get_type_name(), "INSIDE DRIVER RUN PHASE", UVM_LOW);
 			seq_item_port.get_next_item(req);
-			
+
+			if (!req.presetn)
+				seq_item_port.item_done();
+			else begin
+
 			//begin setup phase
+
 			apb_vif.psel<=1'b1;
 			apb_vif.penable<=1'b0;
 			apb_vif.pwrite<=req.pwrite;
@@ -48,6 +53,7 @@ class apb_driver extends uvm_driver#(apb_seq_item);
 			req.pready=apb_vif.pready;
 			
 			seq_item_port.item_done();
+		end
 		end
 	endtask
 

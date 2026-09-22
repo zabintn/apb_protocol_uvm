@@ -13,16 +13,22 @@ class apb_dummy_test extends apb_base_test;
 		super.run_phase(phase);
 		`uvm_info(get_full_name(), "BEFORE RUN PHASE OF DUMMY TEST", UVM_LOW);
 		phase.raise_objection(this);
-
-		`uvm_info(get_type_name(), "REQUESTING 60 WRITES", UVM_LOW);
+		`uvm_info(get_type_name(), "REQUESTING 10 RESET", UVM_LOW);
 		repeat(10) begin
+			dseq= apb_dummy_seq::type_id::create("dseq");
+			dseq.op=apb_dummy_seq::RESET;
+			dseq.start(env_o.agt.seqr);
+		end
+
+		`uvm_info(get_type_name(), "REQUESTING 10 WRITE", UVM_LOW);
+		repeat(60) begin
 			dseq= apb_dummy_seq::type_id::create("dseq");
 			dseq.op=apb_dummy_seq::WRITE;
 			dseq.start(env_o.agt.seqr);
 		end
 		`uvm_info(get_type_name(), "REQUESTED 60 WRITES", UVM_LOW);
 		`uvm_info(get_type_name(), "REQUESTING 60 READS", UVM_LOW);
-		repeat(10) begin
+		repeat(60) begin
 			dseq= apb_dummy_seq::type_id::create("dseq");
 			dseq.op=apb_dummy_seq::READ;
 			dseq.start(env_o.agt.seqr);
