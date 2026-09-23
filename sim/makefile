@@ -6,6 +6,7 @@
 TEST ?= apb_base_test
 UVM_VERBOSITY ?= UVM_MEDIUM
 SEED ?= random
+CLK_FREQUENCY ?= 100
 
 RTL_DIR   = ../rtl
 TB_DIR    = .
@@ -32,6 +33,7 @@ elaborate: compile
 simulate: elaborate
 	xsim $(SNAPSHOT) -runall \
 		-testplusarg "UVM_TESTNAME=$(TEST)" \
+		-testplusarg "CLK_FREQUENCY=$(CLK_FREQUENCY)" \
 		-testplusarg "UVM_VERBOSITY=$(UVM_VERBOSITY)"\
 		-log xsim_$(TEST).log
 

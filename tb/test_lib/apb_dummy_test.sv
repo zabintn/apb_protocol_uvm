@@ -1,6 +1,9 @@
 class apb_dummy_test extends apb_base_test;
 	`uvm_component_utils(apb_dummy_test)
-	apb_dummy_seq dseq;
+	apb_reset_seq rseq;
+	apb_read_seq rdseq;
+	apb_write_seq wrseq;
+	apb_directed_seq dseq;
 	function new(string name= "dummy_test", uvm_component parent=null);
 		super.new(name, parent);
 	endfunction
@@ -15,25 +18,33 @@ class apb_dummy_test extends apb_base_test;
 		phase.raise_objection(this);
 		`uvm_info(get_type_name(), "REQUESTING 10 RESET", UVM_LOW);
 		repeat(10) begin
-			dseq= apb_dummy_seq::type_id::create("dseq");
-			dseq.op=apb_dummy_seq::RESET;
-			dseq.start(env_o.agt.seqr);
+			rseq= apb_reset_seq::type_id::create("rseq");
+			rseq.start(env_o.agt.seqr);
 		end
 		`uvm_info(get_type_name(), "RESET RELEASED", UVM_LOW);
 
 		`uvm_info(get_type_name(), "REQUESTING WRITE TRANSACTIONS", UVM_LOW);
-		repeat(5) begin
-			dseq= apb_dummy_seq::type_id::create("dseq");
-			dseq.op=apb_dummy_seq::WRITE;
-			dseq.start(env_o.agt.seqr);
+		repeat(1) begin
+			wrseq= apb_write_seq::type_id::create("wrseq");
+			wrseq.paddr=32'hCC;
+			wrseq.start(env_o.agt.seqr);
 		end
 		`uvm_info(get_type_name(), "REQUESTED WRITES COMPLETE", UVM_LOW);
 		`uvm_info(get_type_name(), "REQUESTING 60 READ TRANSACTIONS", UVM_LOW);
-		repeat(5) begin
-			dseq= apb_dummy_seq::type_id::create("dseq");
-			dseq.op=apb_dummy_seq::READ;
+		repeat(1) begin
+			rdseq= apb_read_seq::type_id::create("rdseq");
+			rdseq.paddr=32'hCE;
+			rdseq.start(env_o.agt.seqr);
+		end
+		repeat(1) begin
+			dseq= apb_directed_seq::type_id::create("dseq");
+			dseq.presetn=1;
+			dseq.pwrite=1;
+			dseq.paddr= 32'hCC;
+			dseq.pwdata=32'hCAFE_ABCD;
 			dseq.start(env_o.agt.seqr);
 		end
+
 		`uvm_info(get_type_name(), "REQUESTED READS COMPLETE", UVM_LOW);
 		phase.drop_objection(this);
 		`uvm_info(get_full_name(), "AFTER RUN PHASE OF DUMMY TEST", UVM_LOW);
