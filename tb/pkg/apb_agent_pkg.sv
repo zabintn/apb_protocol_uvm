@@ -1,6 +1,7 @@
 package apb_agent_pkg;
 	`include "uvm_macros.svh"
 	import uvm_pkg::*;
+	import apb_param_pkg::*;
 	`include "../agent/apb_driver.sv"
 	`include "../agent/apb_monitor.sv"	
 	`include "../seq_lib/apb_seq_item.sv"	

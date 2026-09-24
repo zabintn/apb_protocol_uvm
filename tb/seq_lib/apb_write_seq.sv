@@ -5,7 +5,7 @@ class apb_write_seq extends apb_base_seq;
 		super.new(name);
 	endfunction
 
-	rand bit [31:0] paddr;
+	rand bit [ADDR_WIDTH-1:0] paddr;
 
 	task body();
 		super.body();

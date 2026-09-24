@@ -24,7 +24,6 @@ always #(clk_period_ns/2) pclk = ~pclk;
 //instantiate interface and DUT
 apb_if apb_vif(pclk);
 
-
 initial begin
 	uvm_config_db#(virtual apb_if)::set(uvm_root::get(), "uvm_test_top.env_o.agt.*", "vif", apb_vif);
 end

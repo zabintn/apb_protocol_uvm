@@ -6,8 +6,8 @@ class apb_directed_seq extends apb_base_seq;
 	endfunction
 	rand bit presetn;
 	rand bit pwrite;
-	rand bit [31:0] paddr;
-	rand bit [31:0] pwdata;
+	rand bit [ADDR_WIDTH-1:0] paddr;
+	rand bit [DATA_WIDTH-1:0] pwdata;
 
 	task body();
 		super.body();

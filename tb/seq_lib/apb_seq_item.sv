@@ -1,12 +1,12 @@
 class apb_seq_item extends uvm_sequence_item;
 
-	rand bit [31:0] paddr;
-	rand bit [31:0] pwdata;
+	rand bit [ADDR_WIDTH-1:0] paddr;
+	rand bit [DATA_WIDTH-1:0] pwdata;
 	rand int pwrite;
 	int psel;
 	int penable;
 	int pready;
-	bit [31:0] prdata;
+	bit [DATA_WIDTH-1:0] prdata;
 	int pslverr;
 	rand int presetn;
 

@@ -27,7 +27,7 @@ class apb_scoreboard extends uvm_scoreboard;
 
 	task run_phase(uvm_phase phase);	
 		apb_seq_item sb_item;
-		bit [32:0] expected_mem [bit[31:0]];
+		bit [DATA_WIDTH-1:0] expected_mem [bit[ADDR_WIDTH-1:0]];
 
 		`uvm_info(get_type_name(), "INSIDE SCOREBOARD RUN PHASE", UVM_LOW);
 		pass_count=0;
