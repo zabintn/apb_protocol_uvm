@@ -1,7 +1,7 @@
 class apb_read_seq extends apb_base_seq;
 	`uvm_object_utils(apb_read_seq)
 
-	rand bit [31:0] paddr;
+	rand bit [ADDR_WIDTH-1:0] paddr;
 
 	function new(string name= "apb_read_seq");
 		super.new(name);
