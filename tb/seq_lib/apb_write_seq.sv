@@ -14,5 +14,6 @@ class apb_write_seq extends apb_base_seq;
 		req.randomize with {presetn==1 && pwrite == 1;
 		paddr==local::paddr;};
 		finish_item(req);
+		req.print();
 	endtask
 endclass

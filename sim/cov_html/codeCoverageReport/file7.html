@@ -29,7 +29,7 @@
 <div class = fileHTMLlayout>
 
 <div class='fileSummary'>
-<font size='2' face='verdana' padding-left:'2px'><b> File Summary of /home/nashita/Desktop/practice/apb_uvm/tb/pkg/apb_env_pkg.sv </b></font>
+<font size='2' face='verdana' padding-left:'2px'><b> File Summary of /home/nashita/Desktop/practice/apb_uvm/tb/pkg/apb_test_pkg.sv </b></font>
 <br clear=all>
 <br clear=all>
 <font face='arial' color=black style='font-size: 12px'>
@@ -53,23 +53,23 @@
 <td class='fileSummaryTable'>7</td>
 <td class='fileSummaryTable'>1</td>
 <td class='fileSummaryTable'>1</td>
-<td class='fileSummaryTable'>41</td>
-<td class='fileSummaryTable'>93</td>
-<td class='fileSummaryTable'>86.0215</td>
+<td class='fileSummaryTable'>44</td>
+<td class='fileSummaryTable'>211</td>
+<td class='fileSummaryTable'>64.9289</td>
 <td class='fileSummaryTable' bgcolor='#FFFFFF' align='center'>
 <label class = 'fileLineCovContainer'>
 <input type='checkbox' id='checkbox_file_linecov' onclick="checkdisplay('checkbox_file_linecov', 'file_linecov');
 openFileContent('button_file_linecov');">
 <span class='fileLineCovCheckmark'> </span> </label>
 </td>
-<td class='fileSummaryTable'>32.3529</td>
+<td class='fileSummaryTable'>14.0625</td>
 <td class='fileSummaryTable' bgcolor='#FFFFFF' align='center'>
 <label class = 'fileBranchCovContainer'>
 <input type='checkbox' id='checkbox_file_branchcov' onclick="checkdisplay('checkbox_file_branchcov', 'file_branchcov');
 openFileContent('button_file_branchcov');">
 <span class='fileBranchCovCheckmark'> </span> </label>
 </td>
-<td class='fileSummaryTable'>40</td>
+<td class='fileSummaryTable'>0</td>
 <td class='fileSummaryTable' bgcolor='#FFFFFF' align='center'>
 <label class = 'fileCondCovContainer'>
 <input type='checkbox' id='checkbox_file_condcov' onclick="checkdisplay('checkbox_file_condcov', 'file_condcov');
@@ -92,10 +92,10 @@ openFileContent('button_file_togglecov');">
 <font face='arial' color=black style='font-size: 14px'>
 <div style='display:none' id='file_linecov'>
 <button class='fileCollapsible' id='button_file_linecov'> <font size='4' color=#009933> &#9776; </font>
- Statement Coverage of File 7 : /home/nashita/Desktop/practice/apb_uvm/tb/pkg/apb_env_pkg.sv</button> 
+ Statement Coverage of File 7 : /home/nashita/Desktop/practice/apb_uvm/tb/pkg/apb_test_pkg.sv</button> 
 <div class='fileContent'>
 <br clear=all>
-<font size='2' face='arial' style='padding-left:6px'> Statement Coverage Summary for File : /home/nashita/Desktop/practice/apb_uvm/tb/pkg/apb_env_pkg.sv</font>
+<font size='2' face='arial' style='padding-left:6px'> Statement Coverage Summary for File : /home/nashita/Desktop/practice/apb_uvm/tb/pkg/apb_test_pkg.sv</font>
 <br clear=all>
 <table class='fileScoreTable'>
 <tr>
@@ -105,10 +105,10 @@ openFileContent('button_file_togglecov');">
 <th class='fileScoreTable' bgcolor='#DEE8EE'> Statement Coverage Score </th>
 </tr>
 <tr>
-<td class='fileScoreTable'>93</td>
-<td class='fileScoreTable' bgcolor='#FFFFC2'>80</td>
-<td class='fileScoreTable' bgcolor='#FFD2D2'>13</td>
-<td class='fileScoreTable' bgcolor='#98FF98'>86.0215</td>
+<td class='fileScoreTable'>211</td>
+<td class='fileScoreTable' bgcolor='#FFFFC2'>137</td>
+<td class='fileScoreTable' bgcolor='#FFD2D2'>74</td>
+<td class='fileScoreTable' bgcolor='#FFFFC2'>64.9289</td>
 </tr>
 </table>
 <br clear=all>
@@ -122,21 +122,21 @@ openFileContent('button_file_togglecov');">
 </tr>
 <tr class='lineTableHoverGrey'>
 <td class='lineTable'>1</td>
-<td class='lineTable'> <pre class='codegrey'>package apb_env_pkg;</pre> </td>
+<td class='lineTable'> <pre class='codegrey'>package apb_test_pkg;</pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
 <tr class='lineTableHoverGreen'>
 <td class='lineTable'>2</td>
 <td class='lineTable'> <pre class='codegreen'>	`include "uvm_macros.svh"</pre> </td>
-<td class='lineTable'>20</td>
-<td class='lineTable'>8</td>
+<td class='lineTable'>4</td>
+<td class='lineTable'>28</td>
 </tr>
-<tr class='lineTableHoverGrey'>
+<tr class='lineTableHoverRed'>
 <td class='lineTable'>3</td>
-<td class='lineTable'> <pre class='codegrey'>	import uvm_pkg::*;</pre> </td>
-<td class='lineTable'> </td>
-<td class='lineTable'> </td>
+<td class='lineTable'> <pre class='codered'>	import uvm_pkg::*;</pre> </td>
+<td class='lineTable'> 0 </td>
+<td class='lineTable'>4</td>
 </tr>
 <tr class='lineTableHoverGrey'>
 <td class='lineTable'>4</td>
@@ -146,33 +146,63 @@ openFileContent('button_file_togglecov');">
 </tr>
 <tr class='lineTableHoverGrey'>
 <td class='lineTable'>5</td>
-<td class='lineTable'> <pre class='codegrey'>	import apb_param_pkg::*;</pre> </td>
+<td class='lineTable'> <pre class='codegrey'>	import apb_env_pkg::*;</pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
-<tr class='lineTableHoverGreen'>
+<tr class='lineTableHoverGrey'>
 <td class='lineTable'>6</td>
-<td class='lineTable'> <pre class='codegreen'>	`include "../env/apb_functional_cov.sv"</pre> </td>
-<td class='lineTable'>25</td>
-<td class='lineTable'>24</td>
+<td class='lineTable'> <pre class='codegrey'>	`include "../test_lib/apb_base_test.sv"</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
 </tr>
 <tr class='lineTableHoverGreen'>
 <td class='lineTable'>7</td>
-<td class='lineTable'> <pre class='codegreen'>	`include "../env/apb_scoreboard.sv"</pre> </td>
-<td class='lineTable'>26</td>
-<td class='lineTable'>4</td>
+<td class='lineTable'> <pre class='codegreen'>	`include "../test_lib/apb_dummy_test.sv"</pre> </td>
+<td class='lineTable'>1</td>
+<td class='lineTable'>1</td>
 </tr>
-<tr class='lineTableHoverGreen'>
+<tr class='lineTableHoverRed'>
 <td class='lineTable'>8</td>
-<td class='lineTable'> <pre class='codegreen'>	`include "../env/apb_env.sv"</pre> </td>
-<td class='lineTable'>1</td>
-<td class='lineTable'>1</td>
+<td class='lineTable'> <pre class='codered'>	`include "../test_lib/apb_single_wr_rd_test.sv"</pre> </td>
+<td class='lineTable'> 0 </td>
+<td class='lineTable'>5</td>
 </tr>
 <tr class='lineTableHoverGrey'>
 <td class='lineTable'>9</td>
-<td class='lineTable'> <pre class='codegrey'>endpackage</pre> </td>
+<td class='lineTable'> <pre class='codegrey'>	`include "../test_lib/apb_overwrite_test.sv"</pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGreen'>
+<td class='lineTable'>10</td>
+<td class='lineTable'> <pre class='codegreen'>	`include "../test_lib/apb_seq_wr_rd_test.sv"</pre> </td>
+<td class='lineTable'>1</td>
+<td class='lineTable'>2</td>
+</tr>
+<tr class='lineTableHoverGreen'>
+<td class='lineTable'>11</td>
+<td class='lineTable'> <pre class='codegreen'>	`include "../test_lib/apb_conseq_wr_rd_test.sv"</pre> </td>
+<td class='lineTable'>2</td>
+<td class='lineTable'>2</td>
+</tr>
+<tr class='lineTableHoverGreen'>
+<td class='lineTable'>12</td>
+<td class='lineTable'> <pre class='codegreen'>	`include "../test_lib/apb_invalid_addr_wr_test.sv"</pre> </td>
+<td class='lineTable'>1</td>
+<td class='lineTable'>6</td>
+</tr>
+<tr class='lineTableHoverGreen'>
+<td class='lineTable'>13</td>
+<td class='lineTable'> <pre class='codegreen'>	`include "../test_lib/apb_invalid_addr_rd_test.sv"</pre> </td>
+<td class='lineTable'>1</td>
+<td class='lineTable'>1</td>
+</tr>
+<tr class='lineTableHoverGreen'>
+<td class='lineTable'>14</td>
+<td class='lineTable'> <pre class='codegreen'>endpackage</pre> </td>
+<td class='lineTable'>3</td>
+<td class='lineTable'>4</td>
 </tr>
 </table>
 </div>
@@ -186,11 +216,11 @@ openFileContent('button_file_togglecov');">
 <font face='arial' color=black style='font-size: 14px'>
 <div style='display:none' id='file_branchcov'>
 <button class='fileBranchCollapsible' id='button_file_branchcov'> <font size='4' color=#003399> &#8380; </font>
- Branch Coverage of File 7 : /home/nashita/Desktop/practice/apb_uvm/tb/pkg/apb_env_pkg.sv</button> 
+ Branch Coverage of File 7 : /home/nashita/Desktop/practice/apb_uvm/tb/pkg/apb_test_pkg.sv</button> 
 <div class='fileBranchContent'>
 <br clear=all>
 <font size='2' face='arial' style='padding-left:6px'>
-Branch Coverage Summary for File : /home/nashita/Desktop/practice/apb_uvm/tb/pkg/apb_env_pkg.sv
+Branch Coverage Summary for File : /home/nashita/Desktop/practice/apb_uvm/tb/pkg/apb_test_pkg.sv
 </font>
 <br clear=all>
 <table class='fileScoreTable'>
@@ -201,10 +231,10 @@ Branch Coverage Summary for File : /home/nashita/Desktop/practice/apb_uvm/tb/pkg
 <th class='fileScoreTable' bgcolor='#DEE8EE'> Branch Coverage Score </th>
 </tr>
 <tr>
-<td class='fileScoreTable'>34</td>
-<td class='fileScoreTable'>11</td>
-<td class='fileScoreTable'>23</td>
-<td class='fileScoreTable' bgcolor='#FFFFC2'>32.3529</td>
+<td class='fileScoreTable'>64</td>
+<td class='fileScoreTable'>9</td>
+<td class='fileScoreTable'>55</td>
+<td class='fileScoreTable' bgcolor='#FFD2D2'>14.0625</td>
 </tr>
 </table>
 <br clear=all>
@@ -218,7 +248,7 @@ Branch Coverage Summary for File : /home/nashita/Desktop/practice/apb_uvm/tb/pkg
 </tr>
 <tr class='lineTableHoverGrey'>
 <td class='lineTable'>1</td>
-<td class='lineTable'> <pre class='codegrey'>package apb_env_pkg;</pre> </td>
+<td class='lineTable'> <pre class='codegrey'>package apb_test_pkg;</pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
@@ -242,33 +272,77 @@ Branch Coverage Summary for File : /home/nashita/Desktop/practice/apb_uvm/tb/pkg
 </tr>
 <tr class='lineTableHoverGrey'>
 <td class='lineTable'>5</td>
-<td class='lineTable'> <pre class='codegrey'>	import apb_param_pkg::*;</pre> </td>
+<td class='lineTable'> <pre class='codegrey'>	import apb_env_pkg::*;</pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
 <tr class='lineTableHoverGrey'>
 <td class='lineTable'>6</td>
-<td class='lineTable'> <pre class='codegrey'>	`include "../env/apb_functional_cov.sv"</pre> </td>
+<td class='lineTable'> <pre class='codegrey'>	`include "../test_lib/apb_base_test.sv"</pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
 <tr class='lineTableHoverGrey'>
 <td class='lineTable'>7</td>
-<td class='lineTable'> <pre class='codegrey'>	`include "../env/apb_scoreboard.sv"</pre> </td>
+<td class='lineTable'> <pre class='codegrey'>	`include "../test_lib/apb_dummy_test.sv"</pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
 <tr class='lineTableHoverGrey'>
 <td class='lineTable'>8</td>
-<td class='lineTable'> <pre class='codegrey'>	`include "../env/apb_env.sv"</pre> </td>
+<td class='lineTable'> <pre class='codegrey'>	`include "../test_lib/apb_single_wr_rd_test.sv"</pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
 <tr class='lineTableHoverGrey'>
 <td class='lineTable'>9</td>
-<td class='lineTable'> <pre class='codegrey'>endpackage</pre> </td>
+<td class='lineTable'> <pre class='codegrey'>	`include "../test_lib/apb_overwrite_test.sv"</pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>10</td>
+<td class='lineTable'> <pre class='codegrey'>	`include "../test_lib/apb_seq_wr_rd_test.sv"</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGreen'>
+<td class='lineTable'>11</td>
+<td class='lineTable'> <pre class='codegreen'>	`include "../test_lib/apb_conseq_wr_rd_test.sv"</pre>
+ <font face='arial' color=orange style='font-size: 12px'><b> Branch 1</b></font></td>
+<td class='lineTable'>1</td>
+<td class='lineTable'>1T 0F </td>
+</tr>
+<tr class='lineTableHoverRed'>
+<td class='lineTable'> </td>
+<td class='lineTable' align ='left'> <pre class='codered'> MISSING ELSE </pre> <font face='arial' color=orange style='font-size: 12px'><b> Branch 2</b></font></td>
+<td class='lineTable'> </td>
+<td class='lineTable'> 0</td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>12</td>
+<td class='lineTable'> <pre class='codegrey'>	`include "../test_lib/apb_invalid_addr_wr_test.sv"</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>13</td>
+<td class='lineTable'> <pre class='codegrey'>	`include "../test_lib/apb_invalid_addr_rd_test.sv"</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGreen'>
+<td class='lineTable'>14</td>
+<td class='lineTable'> <pre class='codegreen'>endpackage</pre>
+ <font face='arial' color=orange style='font-size: 12px'><b> Branch 3</b></font></td>
+<td class='lineTable'>1</td>
+<td class='lineTable'>1T 0F </td>
+</tr>
+<tr class='lineTableHoverRed'>
+<td class='lineTable'> </td>
+<td class='lineTable' align ='left'> <pre class='codered'> MISSING ELSE </pre> <font face='arial' color=orange style='font-size: 12px'><b> Branch 4</b></font></td>
+<td class='lineTable'> </td>
+<td class='lineTable'> 0</td>
 </tr>
 </table>
 </div>
@@ -282,98 +356,22 @@ Branch Coverage Summary for File : /home/nashita/Desktop/practice/apb_uvm/tb/pkg
 <font face='arial' color=black style='font-size: 14px'>
 <div style='display:none' id='file_condcov'>
 <button class='fileCondCollapsible' id='button_file_condcov'> <font size='4' color=#b38f00> &#169; </font>
- Condition Coverage of File 7 : /home/nashita/Desktop/practice/apb_uvm/tb/pkg/apb_env_pkg.sv</button> 
+ Condition Coverage of File 7 : /home/nashita/Desktop/practice/apb_uvm/tb/pkg/apb_test_pkg.sv</button> 
 <div class='fileCondContent'>
 <br clear=all>
 <font size='2' face='arial' style='padding-left:6px'>
-Condition Coverage Summary for File : /home/nashita/Desktop/practice/apb_uvm/tb/pkg/apb_env_pkg.sv
+ No Conditions in File 
+<br clear=all>
 </font>
-<br clear=all>
-<table class='fileScoreTable'>
-<tr>
-<th class='fileScoreTable' bgcolor='#DEE8EE'> Total Conditions </th>
-<th class='fileScoreTable' bgcolor='#DEE8EE'> Covered Conditions </th>
-<th class='fileScoreTable' bgcolor='#DEE8EE'> Uncovered Conditions </th>
-<th class='fileScoreTable' bgcolor='#DEE8EE'> Condition Coverage Score </th>
-</tr>
-<tr>
-<td class='fileScoreTable'>10</td>
-<td class='fileScoreTable'>4</td>
-<td class='fileScoreTable'>6</td>
-<td class='fileScoreTable' bgcolor='#FFFFC2'>40</td>
-</tr>
-</table>
-<br clear=all>
-<div class='condCoverageTable'>
-<table class='lineTable'>
-<tr>
-<th class='lineTable' style='background-color:#FFDD99; line-height:0;' width='80px'> LineNumber </th>
-<th class='lineTable' style='background-color:#FFEB99; line-height:0;'> Condition Result </th>
-<th class='lineTable' style='background-color:#80FFBF; line-height:1;' width='120px'> Evaluation Count </th>
-</tr>
-<tr class='lineTableHoverGreen'>
-<td class='lineTable'>37</td>
-<td class='lineTable'> <pre class='codegreen'>(\this .item_q.size() > 0)__TRUE</pre> </td>
-<td class='lineTable'>1 </td>
-</tr>
-<tr class='lineTableHoverGreen'>
-<td class='lineTable'> </td>
-<td class='lineTable'> <pre class='codegreen'>(\this .item_q.size() > 0)__FALSE</pre> </td>
-<td class='lineTable'>2 </td>
-</tr>
-<tr class='lineTableHoverGreen'>
-<td class='lineTable'>39</td>
-<td class='lineTable'> <pre class='codegreen'>(\this .item_q.size() > 0)__TRUE</pre> </td>
-<td class='lineTable'>1 </td>
-</tr>
-<tr class='lineTableHoverRed'>
-<td class='lineTable'> </td>
-<td class='lineTable'> <pre class='codered'>(\this .item_q.size() > 0)__FALSE</pre> </td>
-<td class='lineTable'>0 </td>
-</tr>
-<tr class='lineTableHoverGreen'>
-<td class='lineTable'>42</td>
-<td class='lineTable'> <pre class='codegreen'>(sb_item.pwrite == 1)__TRUE</pre> </td>
-<td class='lineTable'>1 </td>
-</tr>
-<tr class='lineTableHoverRed'>
-<td class='lineTable'> </td>
-<td class='lineTable'> <pre class='codered'>(sb_item.pwrite == 1)__FALSE</pre> </td>
-<td class='lineTable'>0 </td>
-</tr>
-<tr class='lineTableHoverRed'>
-<td class='lineTable'>47</td>
-<td class='lineTable'> <pre class='codered'>(!expected_mem.exists(sb_item.paddr))__TRUE</pre> </td>
-<td class='lineTable'>0 </td>
-</tr>
-<tr class='lineTableHoverRed'>
-<td class='lineTable'> </td>
-<td class='lineTable'> <pre class='codered'>(!expected_mem.exists(sb_item.paddr))__FALSE</pre> </td>
-<td class='lineTable'>0 </td>
-</tr>
-<tr class='lineTableHoverRed'>
-<td class='lineTable'>48</td>
-<td class='lineTable'> <pre class='codered'>(expected_mem[sb_item.paddr] == 0)__TRUE</pre> </td>
-<td class='lineTable'>0 </td>
-</tr>
-<tr class='lineTableHoverRed'>
-<td class='lineTable'> </td>
-<td class='lineTable'> <pre class='codered'>(expected_mem[sb_item.paddr] == 0)__FALSE</pre> </td>
-<td class='lineTable'>0 </td>
-</tr>
-</table>
 </div>
 <br clear=all>
 </div>
-<br clear=all>
-</div>
-</font>
 </div>
 <div class ='linesSection' style='padding-left:20px; padding-right:20px;'>
 <font face='arial' color=black style='font-size: 14px'>
 <div style='display:none' id='file_togglecov'>
 <button class='fileToggleCollapsible' id='button_file_togglecov'> <font size='4' color=#9999bb> &#8376; </font>
- Toggle Coverage of File 7 : /home/nashita/Desktop/practice/apb_uvm/tb/pkg/apb_env_pkg.sv</button> 
+ Toggle Coverage of File 7 : /home/nashita/Desktop/practice/apb_uvm/tb/pkg/apb_test_pkg.sv</button> 
 <div class='fileToggleContent'>
 <br clear=all>
 <font size='2' face='arial' style='padding-left:6px'>

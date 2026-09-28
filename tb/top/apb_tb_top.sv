@@ -28,6 +28,25 @@ initial begin
 	uvm_config_db#(virtual apb_if)::set(uvm_root::get(), "uvm_test_top.env_o.agt.*", "vif", apb_vif);
 end
 
+/*apb_assertion_module all_inst(.pclk(apb_vif.pclk),
+	.presetn (apb_vif.presetn),
+        .pwrite  (apb_vif.pwrite),
+        .psel    (apb_vif.psel),
+        .penable (apb_vif.penable),
+        .pready  (apb_vif.pready),
+        .pslverr (apb_vif.pslverr));
+*/
+
+bind apb_if apb_assertion_module all_inst (
+  .pclk    (pclk),
+  .presetn (presetn),
+  .pwrite  (pwrite),
+  .psel    (psel),
+  .penable (penable),
+  .pready  (pready),
+  .pslverr (pslverr)
+);
+
 initial begin
 	run_test("base_test");
 end

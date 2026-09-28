@@ -17,5 +17,6 @@ class apb_read_seq extends apb_base_seq;
 			paddr == local::paddr;
 			pwdata== '0;};
 		finish_item(req);
+		req.print();
 	endtask
 endclass

@@ -20,6 +20,7 @@ class apb_directed_seq extends apb_base_seq;
 			pwdata==local::pwdata;
 			};
 		finish_item(req);
+		req.print();
 	endtask
 endclass
 
