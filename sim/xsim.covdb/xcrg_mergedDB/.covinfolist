@@ -1,0 +1,6 @@
+cov_db/xsim.covdb/apb_invalid_addr_rd_test_run1/xsim.covinfo
+cov_db/xsim.covdb/apb_overwrite_test_run1/xsim.covinfo
+cov_db/xsim.covdb/apb_single_wr_rd_test_run1/xsim.covinfo
+cov_db/xsim.covdb/apb_conseq_wr_rd_test_run1/xsim.covinfo
+cov_db/xsim.covdb/apb_invalid_addr_wr_test_run1/xsim.covinfo
+cov_db/xsim.covdb/apb_seq_wr_rd_test_run1/xsim.covinfo

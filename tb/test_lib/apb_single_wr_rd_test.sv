@@ -23,7 +23,7 @@ class apb_single_wr_rd_test extends apb_base_test;
 			dseq=apb_directed_seq::type_id::create("dseq");
 			dseq.presetn=1;
 			dseq.pwrite=1;
-			dseq.paddr=32'hBB;
+			dseq.paddr=32'h0C;
 			dseq.pwdata=32'hDEAD_BEEF;
 			dseq.start(env_o.agt.seqr);
 		end
@@ -32,7 +32,7 @@ class apb_single_wr_rd_test extends apb_base_test;
 			dseq=apb_directed_seq::type_id::create("dseq");
 			dseq.presetn=1;
 			dseq.pwrite=0;
-			dseq.paddr=32'hBB;
+			dseq.paddr=32'h0C;
 			dseq.start(env_o.agt.seqr);
 		end
 		phase.drop_objection(this);

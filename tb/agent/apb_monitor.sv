@@ -24,8 +24,7 @@ class apb_monitor extends uvm_monitor;
                 forever begin
                         //wait until reset deassertion
 
-                        do @(posedge apb_vif.pclk);
-                        while(!apb_vif.presetn);
+                        wait(apb_vif.presetn);
 
                         //wait until setup phase
 
@@ -33,7 +32,6 @@ class apb_monitor extends uvm_monitor;
                         while (!(apb_vif.psel==1 && apb_vif.penable==0));
 
                         `uvm_info(get_type_name(), "SETUP PHASE STARTED", UVM_LOW);
-
                         @(negedge apb_vif.pclk);
 
                         mon_item.psel=apb_vif.psel;

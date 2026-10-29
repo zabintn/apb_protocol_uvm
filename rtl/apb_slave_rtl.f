@@ -1,0 +1,9 @@
++incdir+include
+src/apb_pkg.sv
+src/apb_intf.sv
+src/apb_err_slv.sv
+src/addr_decode.sv
+src/apb_regs.sv
+src/apb_cdc.sv
+src/apb_demux.sv
+src/apb_slave_top.sv

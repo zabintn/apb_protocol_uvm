@@ -39,6 +39,8 @@ class apb_driver extends uvm_driver#(apb_seq_item);
 				seq_item_port.item_done();
 			end
 			else begin
+				timeout_count=0;
+
 				//begin setup phase
 				apb_vif.psel<=1'b1;
 				apb_vif.penable<=1'b0;
@@ -58,6 +60,11 @@ class apb_driver extends uvm_driver#(apb_seq_item);
 				end while (apb_vif.pready!==1'b1);
 
 				req.pready = apb_vif.pready;
+				req.pslverr=apb_vif.pslverr;
+				if(!req.pwrite) req.prdata=apb_vif.prdata;
+
+				apb_vif.psel<=1'b0;
+				apb_vif.penable <= 1'b0;
 		
 				seq_item_port.item_done();
 			end

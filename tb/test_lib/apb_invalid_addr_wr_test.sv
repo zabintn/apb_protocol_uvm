@@ -23,12 +23,6 @@ class apb_invalid_addr_wr_test extends apb_base_test;
 			wrseq.start(env_o.agt.seqr);
 		end
 
-		`uvm_info(get_full_name(), "PERFORMING A READ AT THE SAME ADDRESS", UVM_LOW);
-		repeat(1) begin
-			rdseq=apb_read_seq::type_id::create("rdseq");
-			rdseq.paddr=32'h500;
-			rdseq.start(env_o.agt.seqr);
-		end
 		phase.drop_objection(this);
 		`uvm_info(get_full_name(), "AFTER OVERWRITE TEST", UVM_LOW);
 	endtask

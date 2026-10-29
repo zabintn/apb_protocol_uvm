@@ -29,7 +29,7 @@
 <div class = fileHTMLlayout>
 
 <div class='fileSummary'>
-<font size='2' face='verdana' padding-left:'2px'><b> File Summary of /home/nashita/Desktop/practice/apb_uvm/tb/top/apb_assertion_module.sv </b></font>
+<font size='2' face='verdana' padding-left:'2px'><b> File Summary of /home/nashita/Desktop/workspace/apb_uvm/tb/pkg/apb_test_pkg.sv </b></font>
 <br clear=all>
 <br clear=all>
 <font face='arial' color=black style='font-size: 12px'>
@@ -53,16 +53,16 @@
 <td class='fileSummaryTable'>10</td>
 <td class='fileSummaryTable'>1</td>
 <td class='fileSummaryTable'>1</td>
-<td class='fileSummaryTable'>4</td>
-<td class='fileSummaryTable'>4</td>
-<td class='fileSummaryTable'>25</td>
+<td class='fileSummaryTable'>44</td>
+<td class='fileSummaryTable'>211</td>
+<td class='fileSummaryTable'>63.0332</td>
 <td class='fileSummaryTable' bgcolor='#FFFFFF' align='center'>
 <label class = 'fileLineCovContainer'>
 <input type='checkbox' id='checkbox_file_linecov' onclick="checkdisplay('checkbox_file_linecov', 'file_linecov');
 openFileContent('button_file_linecov');">
 <span class='fileLineCovCheckmark'> </span> </label>
 </td>
-<td class='fileSummaryTable'>0</td>
+<td class='fileSummaryTable'>10.9375</td>
 <td class='fileSummaryTable' bgcolor='#FFFFFF' align='center'>
 <label class = 'fileBranchCovContainer'>
 <input type='checkbox' id='checkbox_file_branchcov' onclick="checkdisplay('checkbox_file_branchcov', 'file_branchcov');
@@ -92,10 +92,10 @@ openFileContent('button_file_togglecov');">
 <font face='arial' color=black style='font-size: 14px'>
 <div style='display:none' id='file_linecov'>
 <button class='fileCollapsible' id='button_file_linecov'> <font size='4' color=#009933> &#9776; </font>
- Statement Coverage of File 10 : /home/nashita/Desktop/practice/apb_uvm/tb/top/apb_assertion_module.sv</button> 
+ Statement Coverage of File 10 : /home/nashita/Desktop/workspace/apb_uvm/tb/pkg/apb_test_pkg.sv</button> 
 <div class='fileContent'>
 <br clear=all>
-<font size='2' face='arial' style='padding-left:6px'> Statement Coverage Summary for File : /home/nashita/Desktop/practice/apb_uvm/tb/top/apb_assertion_module.sv</font>
+<font size='2' face='arial' style='padding-left:6px'> Statement Coverage Summary for File : /home/nashita/Desktop/workspace/apb_uvm/tb/pkg/apb_test_pkg.sv</font>
 <br clear=all>
 <table class='fileScoreTable'>
 <tr>
@@ -105,10 +105,10 @@ openFileContent('button_file_togglecov');">
 <th class='fileScoreTable' bgcolor='#DEE8EE'> Statement Coverage Score </th>
 </tr>
 <tr>
-<td class='fileScoreTable'>4</td>
-<td class='fileScoreTable' bgcolor='#FFFFC2'>1</td>
-<td class='fileScoreTable' bgcolor='#FFD2D2'>3</td>
-<td class='fileScoreTable' bgcolor='#FFD2D2'>25</td>
+<td class='fileScoreTable'>211</td>
+<td class='fileScoreTable' bgcolor='#FFFFC2'>133</td>
+<td class='fileScoreTable' bgcolor='#FFD2D2'>78</td>
+<td class='fileScoreTable' bgcolor='#FFFFC2'>63.0332</td>
 </tr>
 </table>
 <br clear=all>
@@ -122,339 +122,87 @@ openFileContent('button_file_togglecov');">
 </tr>
 <tr class='lineTableHoverGrey'>
 <td class='lineTable'>1</td>
-<td class='lineTable'> <pre class='codegrey'>module apb_assertion_module (input bit pclk, </pre> </td>
+<td class='lineTable'> <pre class='codegrey'>package apb_test_pkg;</pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
-<tr class='lineTableHoverGrey'>
+<tr class='lineTableHoverGreen'>
 <td class='lineTable'>2</td>
-<td class='lineTable'> <pre class='codegrey'>	input logic presetn, </pre> </td>
-<td class='lineTable'> </td>
-<td class='lineTable'> </td>
+<td class='lineTable'> <pre class='codegreen'>	`include "uvm_macros.svh"</pre> </td>
+<td class='lineTable'>4</td>
+<td class='lineTable'>28</td>
 </tr>
-<tr class='lineTableHoverGrey'>
+<tr class='lineTableHoverRed'>
 <td class='lineTable'>3</td>
-<td class='lineTable'> <pre class='codegrey'>	input logic pwrite, </pre> </td>
-<td class='lineTable'> </td>
-<td class='lineTable'> </td>
+<td class='lineTable'> <pre class='codered'>	import uvm_pkg::*;</pre> </td>
+<td class='lineTable'> 0 </td>
+<td class='lineTable'>4</td>
 </tr>
 <tr class='lineTableHoverGrey'>
 <td class='lineTable'>4</td>
-<td class='lineTable'> <pre class='codegrey'>	input logic psel, </pre> </td>
+<td class='lineTable'> <pre class='codegrey'>	import apb_agent_pkg::*;</pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
 <tr class='lineTableHoverGrey'>
 <td class='lineTable'>5</td>
-<td class='lineTable'> <pre class='codegrey'>	input logic penable, </pre> </td>
+<td class='lineTable'> <pre class='codegrey'>	import apb_env_pkg::*;</pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
 <tr class='lineTableHoverGrey'>
 <td class='lineTable'>6</td>
-<td class='lineTable'> <pre class='codegrey'>	input logic pready, </pre> </td>
-<td class='lineTable'> </td>
-<td class='lineTable'> </td>
-</tr>
-<tr class='lineTableHoverGrey'>
-<td class='lineTable'>7</td>
-<td class='lineTable'> <pre class='codegrey'>	input logic pslverr);</pre> </td>
-<td class='lineTable'> </td>
-<td class='lineTable'> </td>
-</tr>
-<tr class='lineTableHoverGrey'>
-<td class='lineTable'>8</td>
-<td class='lineTable'> <pre class='codegrey'> </pre> </td>
-<td class='lineTable'> </td>
-<td class='lineTable'> </td>
-</tr>
-<tr class='lineTableHoverGrey'>
-<td class='lineTable'>9</td>
-<td class='lineTable'> <pre class='codegrey'>	//penable will go high one clock cycle after psel</pre> </td>
-<td class='lineTable'> </td>
-<td class='lineTable'> </td>
-</tr>
-<tr class='lineTableHoverGrey'>
-<td class='lineTable'>10</td>
-<td class='lineTable'> <pre class='codegrey'>	</pre> </td>
-<td class='lineTable'> </td>
-<td class='lineTable'> </td>
-</tr>
-<tr class='lineTableHoverGrey'>
-<td class='lineTable'>11</td>
-<td class='lineTable'> <pre class='codegrey'>	sequence setup_phase;</pre> </td>
-<td class='lineTable'> </td>
-<td class='lineTable'> </td>
-</tr>
-<tr class='lineTableHoverGrey'>
-<td class='lineTable'>12</td>
-<td class='lineTable'> <pre class='codegrey'>		psel && !penable;</pre> </td>
-<td class='lineTable'> </td>
-<td class='lineTable'> </td>
-</tr>
-<tr class='lineTableHoverGrey'>
-<td class='lineTable'>13</td>
-<td class='lineTable'> <pre class='codegrey'>	endsequence</pre> </td>
-<td class='lineTable'> </td>
-<td class='lineTable'> </td>
-</tr>
-<tr class='lineTableHoverGrey'>
-<td class='lineTable'>14</td>
-<td class='lineTable'> <pre class='codegrey'> </pre> </td>
-<td class='lineTable'> </td>
-<td class='lineTable'> </td>
-</tr>
-<tr class='lineTableHoverGrey'>
-<td class='lineTable'>15</td>
-<td class='lineTable'> <pre class='codegrey'>	sequence access_phase;</pre> </td>
-<td class='lineTable'> </td>
-<td class='lineTable'> </td>
-</tr>
-<tr class='lineTableHoverGrey'>
-<td class='lineTable'>16</td>
-<td class='lineTable'> <pre class='codegrey'>		psel && penable;</pre> </td>
-<td class='lineTable'> </td>
-<td class='lineTable'> </td>
-</tr>
-<tr class='lineTableHoverGrey'>
-<td class='lineTable'>17</td>
-<td class='lineTable'> <pre class='codegrey'>	endsequence</pre> </td>
-<td class='lineTable'> </td>
-<td class='lineTable'> </td>
-</tr>
-<tr class='lineTableHoverGrey'>
-<td class='lineTable'>18</td>
-<td class='lineTable'> <pre class='codegrey'>	</pre> </td>
-<td class='lineTable'> </td>
-<td class='lineTable'> </td>
-</tr>
-<tr class='lineTableHoverGrey'>
-<td class='lineTable'>19</td>
-<td class='lineTable'> <pre class='codegrey'>	property setup_to_access;</pre> </td>
-<td class='lineTable'> </td>
-<td class='lineTable'> </td>
-</tr>
-<tr class='lineTableHoverGrey'>
-<td class='lineTable'>20</td>
-<td class='lineTable'> <pre class='codegrey'>		@(posedge pclk) disable iff(!presetn)</pre> </td>
-<td class='lineTable'> </td>
-<td class='lineTable'> </td>
-</tr>
-<tr class='lineTableHoverGrey'>
-<td class='lineTable'>21</td>
-<td class='lineTable'> <pre class='codegrey'>		setup_phase |=&gt access_phase;</pre> </td>
-<td class='lineTable'> </td>
-<td class='lineTable'> </td>
-</tr>
-<tr class='lineTableHoverGrey'>
-<td class='lineTable'>22</td>
-<td class='lineTable'> <pre class='codegrey'>	endproperty</pre> </td>
-<td class='lineTable'> </td>
-<td class='lineTable'> </td>
-</tr>
-<tr class='lineTableHoverGrey'>
-<td class='lineTable'>23</td>
-<td class='lineTable'> <pre class='codegrey'> </pre> </td>
-<td class='lineTable'> </td>
-<td class='lineTable'> </td>
-</tr>
-<tr class='lineTableHoverRed'>
-<td class='lineTable'>24</td>
-<td class='lineTable'> <pre class='codered'>	access_assert: assert property (setup_to_access) else $display("SETUP PHASE TO ACESS PHASE ASSERTION FAILED AT = %0t", $time);				</pre> </td>
-<td class='lineTable'> 0 </td>
-<td class='lineTable'>1</td>
-</tr>
-<tr class='lineTableHoverGrey'>
-<td class='lineTable'>25</td>
-<td class='lineTable'> <pre class='codegrey'> </pre> </td>
-<td class='lineTable'> </td>
-<td class='lineTable'> </td>
-</tr>
-<tr class='lineTableHoverGrey'>
-<td class='lineTable'>26</td>
-<td class='lineTable'> <pre class='codegrey'>	//penable can't be high when psel is low</pre> </td>
-<td class='lineTable'> </td>
-<td class='lineTable'> </td>
-</tr>
-<tr class='lineTableHoverGrey'>
-<td class='lineTable'>27</td>
-<td class='lineTable'> <pre class='codegrey'>	</pre> </td>
-<td class='lineTable'> </td>
-<td class='lineTable'> </td>
-</tr>
-<tr class='lineTableHoverGrey'>
-<td class='lineTable'>28</td>
-<td class='lineTable'> <pre class='codegrey'>	property  penable_condition;</pre> </td>
-<td class='lineTable'> </td>
-<td class='lineTable'> </td>
-</tr>
-<tr class='lineTableHoverGrey'>
-<td class='lineTable'>29</td>
-<td class='lineTable'> <pre class='codegrey'>		@(posedge pclk) disable iff(!presetn)</pre> </td>
-<td class='lineTable'> </td>
-<td class='lineTable'> </td>
-</tr>
-<tr class='lineTableHoverGrey'>
-<td class='lineTable'>30</td>
-<td class='lineTable'> <pre class='codegrey'>		penable |-&gt psel;</pre> </td>
-<td class='lineTable'> </td>
-<td class='lineTable'> </td>
-</tr>
-<tr class='lineTableHoverGrey'>
-<td class='lineTable'>31</td>
-<td class='lineTable'> <pre class='codegrey'>	endproperty</pre> </td>
-<td class='lineTable'> </td>
-<td class='lineTable'> </td>
-</tr>
-<tr class='lineTableHoverGrey'>
-<td class='lineTable'>32</td>
-<td class='lineTable'> <pre class='codegrey'> </pre> </td>
-<td class='lineTable'> </td>
-<td class='lineTable'> </td>
-</tr>
-<tr class='lineTableHoverRed'>
-<td class='lineTable'>33</td>
-<td class='lineTable'> <pre class='codered'>	penable_assert: assert property (penable_condition) else $display("PENABLE CONDITION ASSERTION FAILED AT =%0t", $time);</pre> </td>
-<td class='lineTable'> 0 </td>
-<td class='lineTable'>1</td>
-</tr>
-<tr class='lineTableHoverGrey'>
-<td class='lineTable'>34</td>
-<td class='lineTable'> <pre class='codegrey'> </pre> </td>
-<td class='lineTable'> </td>
-<td class='lineTable'> </td>
-</tr>
-<tr class='lineTableHoverGrey'>
-<td class='lineTable'>35</td>
-<td class='lineTable'> <pre class='codegrey'>	//pslverr is only high after access phase</pre> </td>
-<td class='lineTable'> </td>
-<td class='lineTable'> </td>
-</tr>
-<tr class='lineTableHoverGrey'>
-<td class='lineTable'>36</td>
-<td class='lineTable'> <pre class='codegrey'>	</pre> </td>
-<td class='lineTable'> </td>
-<td class='lineTable'> </td>
-</tr>
-<tr class='lineTableHoverGrey'>
-<td class='lineTable'>37</td>
-<td class='lineTable'> <pre class='codegrey'>	sequence access_phase_done;</pre> </td>
-<td class='lineTable'> </td>
-<td class='lineTable'> </td>
-</tr>
-<tr class='lineTableHoverGrey'>
-<td class='lineTable'>38</td>
-<td class='lineTable'> <pre class='codegrey'>		psel && penable;</pre> </td>
-<td class='lineTable'> </td>
-<td class='lineTable'> </td>
-</tr>
-<tr class='lineTableHoverGrey'>
-<td class='lineTable'>39</td>
-<td class='lineTable'> <pre class='codegrey'>	endsequence</pre> </td>
-<td class='lineTable'> </td>
-<td class='lineTable'> </td>
-</tr>
-<tr class='lineTableHoverGrey'>
-<td class='lineTable'>40</td>
-<td class='lineTable'> <pre class='codegrey'> </pre> </td>
-<td class='lineTable'> </td>
-<td class='lineTable'> </td>
-</tr>
-<tr class='lineTableHoverGrey'>
-<td class='lineTable'>41</td>
-<td class='lineTable'> <pre class='codegrey'> </pre> </td>
-<td class='lineTable'> </td>
-<td class='lineTable'> </td>
-</tr>
-<tr class='lineTableHoverGrey'>
-<td class='lineTable'>42</td>
-<td class='lineTable'> <pre class='codegrey'>	property pslverr_condition;</pre> </td>
-<td class='lineTable'> </td>
-<td class='lineTable'> </td>
-</tr>
-<tr class='lineTableHoverGrey'>
-<td class='lineTable'>43</td>
-<td class='lineTable'> <pre class='codegrey'>		@(posedge pclk) disable iff(!presetn)</pre> </td>
-<td class='lineTable'> </td>
-<td class='lineTable'> </td>
-</tr>
-<tr class='lineTableHoverGrey'>
-<td class='lineTable'>44</td>
-<td class='lineTable'> <pre class='codegrey'>		pslverr |-&gt access_phase_done;</pre> </td>
-<td class='lineTable'> </td>
-<td class='lineTable'> </td>
-</tr>
-<tr class='lineTableHoverGrey'>
-<td class='lineTable'>45</td>
-<td class='lineTable'> <pre class='codegrey'>	endproperty</pre> </td>
-<td class='lineTable'> </td>
-<td class='lineTable'> </td>
-</tr>
-<tr class='lineTableHoverGrey'>
-<td class='lineTable'>46</td>
-<td class='lineTable'> <pre class='codegrey'> </pre> </td>
-<td class='lineTable'> </td>
-<td class='lineTable'> </td>
-</tr>
-<tr class='lineTableHoverGrey'>
-<td class='lineTable'>47</td>
-<td class='lineTable'> <pre class='codegrey'>	property pready_condition;</pre> </td>
-<td class='lineTable'> </td>
-<td class='lineTable'> </td>
-</tr>
-<tr class='lineTableHoverGrey'>
-<td class='lineTable'>48</td>
-<td class='lineTable'> <pre class='codegrey'>		@(posedge pclk) disable iff(!presetn)</pre> </td>
-<td class='lineTable'> </td>
-<td class='lineTable'> </td>
-</tr>
-<tr class='lineTableHoverGrey'>
-<td class='lineTable'>49</td>
-<td class='lineTable'> <pre class='codegrey'>		pready |-&gt pslverr;</pre> </td>
-<td class='lineTable'> </td>
-<td class='lineTable'> </td>
-</tr>
-<tr class='lineTableHoverGrey'>
-<td class='lineTable'>50</td>
-<td class='lineTable'> <pre class='codegrey'>	endproperty</pre> </td>
-<td class='lineTable'> </td>
-<td class='lineTable'> </td>
-</tr>
-<tr class='lineTableHoverGrey'>
-<td class='lineTable'>51</td>
-<td class='lineTable'> <pre class='codegrey'> </pre> </td>
-<td class='lineTable'> </td>
-<td class='lineTable'> </td>
-</tr>
-<tr class='lineTableHoverRed'>
-<td class='lineTable'>52</td>
-<td class='lineTable'> <pre class='codered'>	pslverr_assert: assert property (pslverr_condition) else $display("PSLVERR CONDITION ASSERTION FAILED AT = %0t)", $time);</pre> </td>
-<td class='lineTable'> 0 </td>
-<td class='lineTable'>1</td>
-</tr>
-<tr class='lineTableHoverGrey'>
-<td class='lineTable'>53</td>
-<td class='lineTable'> <pre class='codegrey'> </pre> </td>
+<td class='lineTable'> <pre class='codegrey'>	`include "../test_lib/apb_base_test.sv"</pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
 <tr class='lineTableHoverGreen'>
-<td class='lineTable'>54</td>
-<td class='lineTable'> <pre class='codegreen'>	test_assert: assert property (pready_condition) else $display("YYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY ...</pre> </td>
-<td class='lineTable'>3</td>
+<td class='lineTable'>7</td>
+<td class='lineTable'> <pre class='codegreen'>	`include "../test_lib/apb_dummy_test.sv"</pre> </td>
+<td class='lineTable'>1</td>
 <td class='lineTable'>1</td>
 </tr>
+<tr class='lineTableHoverRed'>
+<td class='lineTable'>8</td>
+<td class='lineTable'> <pre class='codered'>	`include "../test_lib/apb_single_wr_rd_test.sv"</pre> </td>
+<td class='lineTable'> 0 </td>
+<td class='lineTable'>5</td>
+</tr>
 <tr class='lineTableHoverGrey'>
-<td class='lineTable'>55</td>
-<td class='lineTable'> <pre class='codegrey'>endmodule</pre> </td>
+<td class='lineTable'>9</td>
+<td class='lineTable'> <pre class='codegrey'>	`include "../test_lib/apb_overwrite_test.sv"</pre> </td>
 <td class='lineTable'> </td>
 <td class='lineTable'> </td>
 </tr>
-<tr class='lineTableHoverGrey'>
-<td class='lineTable'>56</td>
-<td class='lineTable'> <pre class='codegrey'>	</pre> </td>
-<td class='lineTable'> </td>
-<td class='lineTable'> </td>
+<tr class='lineTableHoverGreen'>
+<td class='lineTable'>10</td>
+<td class='lineTable'> <pre class='codegreen'>	`include "../test_lib/apb_seq_wr_rd_test.sv"</pre> </td>
+<td class='lineTable'>1</td>
+<td class='lineTable'>2</td>
+</tr>
+<tr class='lineTableHoverGreen'>
+<td class='lineTable'>11</td>
+<td class='lineTable'> <pre class='codegreen'>	`include "../test_lib/apb_conseq_wr_rd_test.sv"</pre> </td>
+<td class='lineTable'>2</td>
+<td class='lineTable'>2</td>
+</tr>
+<tr class='lineTableHoverGreen'>
+<td class='lineTable'>12</td>
+<td class='lineTable'> <pre class='codegreen'>	`include "../test_lib/apb_invalid_addr_wr_test.sv"</pre> </td>
+<td class='lineTable'>1</td>
+<td class='lineTable'>6</td>
+</tr>
+<tr class='lineTableHoverGreen'>
+<td class='lineTable'>13</td>
+<td class='lineTable'> <pre class='codegreen'>	`include "../test_lib/apb_invalid_addr_rd_test.sv"</pre> </td>
+<td class='lineTable'>1</td>
+<td class='lineTable'>1</td>
+</tr>
+<tr class='lineTableHoverGreen'>
+<td class='lineTable'>14</td>
+<td class='lineTable'> <pre class='codegreen'>endpackage</pre> </td>
+<td class='lineTable'>3</td>
+<td class='lineTable'>4</td>
 </tr>
 </table>
 </div>
@@ -468,22 +216,147 @@ openFileContent('button_file_togglecov');">
 <font face='arial' color=black style='font-size: 14px'>
 <div style='display:none' id='file_branchcov'>
 <button class='fileBranchCollapsible' id='button_file_branchcov'> <font size='4' color=#003399> &#8380; </font>
- Branch Coverage of File 10 : /home/nashita/Desktop/practice/apb_uvm/tb/top/apb_assertion_module.sv</button> 
+ Branch Coverage of File 10 : /home/nashita/Desktop/workspace/apb_uvm/tb/pkg/apb_test_pkg.sv</button> 
 <div class='fileBranchContent'>
 <br clear=all>
 <font size='2' face='arial' style='padding-left:6px'>
- No Branches in File 
-<br clear=all>
+Branch Coverage Summary for File : /home/nashita/Desktop/workspace/apb_uvm/tb/pkg/apb_test_pkg.sv
 </font>
+<br clear=all>
+<table class='fileScoreTable'>
+<tr>
+<th class='fileScoreTable' bgcolor='#DEE8EE'> Total Branches </th>
+<th class='fileScoreTable' bgcolor='#DEE8EE'> Covered Branches </th>
+<th class='fileScoreTable' bgcolor='#DEE8EE'> Uncovered Branches </th>
+<th class='fileScoreTable' bgcolor='#DEE8EE'> Branch Coverage Score </th>
+</tr>
+<tr>
+<td class='fileScoreTable'>64</td>
+<td class='fileScoreTable'>7</td>
+<td class='fileScoreTable'>57</td>
+<td class='fileScoreTable' bgcolor='#FFD2D2'>10.9375</td>
+</tr>
+</table>
+<br clear=all>
+<div class='branchCoverageTable'>
+<table class='lineTable'>
+<tr>
+<th class='lineTable' style='background-color:#FFDD99; line-height:0;' width='80px'> LineNumber </th>
+<th class='lineTable' style='background-color:#FFEB99; line-height:0;'> Branch </th>
+<th class='lineTable' style='background-color:#80FFBF; line-height:1;' width='120px'> Desicion Evaluated  </th>
+<th class='lineTable' style='background-color:#FFE6E6; line-height:1;' width='140px'> TRUE/FALSE Branch Execution Count[s]  </th>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>1</td>
+<td class='lineTable'> <pre class='codegrey'>package apb_test_pkg;</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>2</td>
+<td class='lineTable'> <pre class='codegrey'>	`include "uvm_macros.svh"</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>3</td>
+<td class='lineTable'> <pre class='codegrey'>	import uvm_pkg::*;</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>4</td>
+<td class='lineTable'> <pre class='codegrey'>	import apb_agent_pkg::*;</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>5</td>
+<td class='lineTable'> <pre class='codegrey'>	import apb_env_pkg::*;</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>6</td>
+<td class='lineTable'> <pre class='codegrey'>	`include "../test_lib/apb_base_test.sv"</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>7</td>
+<td class='lineTable'> <pre class='codegrey'>	`include "../test_lib/apb_dummy_test.sv"</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>8</td>
+<td class='lineTable'> <pre class='codegrey'>	`include "../test_lib/apb_single_wr_rd_test.sv"</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>9</td>
+<td class='lineTable'> <pre class='codegrey'>	`include "../test_lib/apb_overwrite_test.sv"</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>10</td>
+<td class='lineTable'> <pre class='codegrey'>	`include "../test_lib/apb_seq_wr_rd_test.sv"</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGreen'>
+<td class='lineTable'>11</td>
+<td class='lineTable'> <pre class='codegreen'>	`include "../test_lib/apb_conseq_wr_rd_test.sv"</pre>
+ <font face='arial' color=orange style='font-size: 12px'><b> Branch 1</b></font></td>
+<td class='lineTable'>1</td>
+<td class='lineTable'>1T 0F </td>
+</tr>
+<tr class='lineTableHoverRed'>
+<td class='lineTable'> </td>
+<td class='lineTable' align ='left'> <pre class='codered'> MISSING ELSE </pre> <font face='arial' color=orange style='font-size: 12px'><b> Branch 2</b></font></td>
+<td class='lineTable'> </td>
+<td class='lineTable'> 0</td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>12</td>
+<td class='lineTable'> <pre class='codegrey'>	`include "../test_lib/apb_invalid_addr_wr_test.sv"</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGrey'>
+<td class='lineTable'>13</td>
+<td class='lineTable'> <pre class='codegrey'>	`include "../test_lib/apb_invalid_addr_rd_test.sv"</pre> </td>
+<td class='lineTable'> </td>
+<td class='lineTable'> </td>
+</tr>
+<tr class='lineTableHoverGreen'>
+<td class='lineTable'>14</td>
+<td class='lineTable'> <pre class='codegreen'>endpackage</pre>
+ <font face='arial' color=orange style='font-size: 12px'><b> Branch 3</b></font></td>
+<td class='lineTable'>1</td>
+<td class='lineTable'>1T 0F </td>
+</tr>
+<tr class='lineTableHoverRed'>
+<td class='lineTable'> </td>
+<td class='lineTable' align ='left'> <pre class='codered'> MISSING ELSE </pre> <font face='arial' color=orange style='font-size: 12px'><b> Branch 4</b></font></td>
+<td class='lineTable'> </td>
+<td class='lineTable'> 0</td>
+</tr>
+</table>
 </div>
 <br clear=all>
 </div>
+<br clear=all>
+</div>
+</font>
 </div>
 <div class ='linesSection' style='padding-left:20px; padding-right:20px;'>
 <font face='arial' color=black style='font-size: 14px'>
 <div style='display:none' id='file_condcov'>
 <button class='fileCondCollapsible' id='button_file_condcov'> <font size='4' color=#b38f00> &#169; </font>
- Condition Coverage of File 10 : /home/nashita/Desktop/practice/apb_uvm/tb/top/apb_assertion_module.sv</button> 
+ Condition Coverage of File 10 : /home/nashita/Desktop/workspace/apb_uvm/tb/pkg/apb_test_pkg.sv</button> 
 <div class='fileCondContent'>
 <br clear=all>
 <font size='2' face='arial' style='padding-left:6px'>
@@ -498,7 +371,7 @@ openFileContent('button_file_togglecov');">
 <font face='arial' color=black style='font-size: 14px'>
 <div style='display:none' id='file_togglecov'>
 <button class='fileToggleCollapsible' id='button_file_togglecov'> <font size='4' color=#9999bb> &#8376; </font>
- Toggle Coverage of File 10 : /home/nashita/Desktop/practice/apb_uvm/tb/top/apb_assertion_module.sv</button> 
+ Toggle Coverage of File 10 : /home/nashita/Desktop/workspace/apb_uvm/tb/pkg/apb_test_pkg.sv</button> 
 <div class='fileToggleContent'>
 <br clear=all>
 <font size='2' face='arial' style='padding-left:6px'>
