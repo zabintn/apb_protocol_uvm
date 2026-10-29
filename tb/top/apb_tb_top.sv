@@ -44,7 +44,7 @@ resp_t resp;
 apb_if apb_vif(pclk);
 
 initial begin
-	uvm_config_db#(virtual apb_if)::set(uvm_root::get(), "uvm_test_top.env_o.agt.*", "vif", apb_vif);
+	uvm_config_db#(virtual apb_if)::set(uvm_root::get(), "*", "vif", apb_vif);
 end
 
 apb_slave_top #(.ADDR_WIDTH(ADDR_WIDTH),
